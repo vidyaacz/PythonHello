@@ -4,7 +4,7 @@ pipeline {
         stage('Build') { 
             agent {
                 docker {
-                    image 'mcr.microsoft.com/windows-cssc/python3' 
+                    image 'winamd64/python' 
                 }
             }
             steps {

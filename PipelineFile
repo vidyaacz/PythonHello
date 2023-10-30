@@ -6,6 +6,9 @@ pipeline {
     }
     stages{
         stage('Python Version') {
+            environment {
+                home="."
+            }
             steps {
                 sh 'python --version'
             }

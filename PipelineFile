@@ -1,12 +1,11 @@
 pipeline {
-    agent none 
+    agent {
+        docker {
+            image 'python' 
+        }
+    }
     stages {
-        stage('Build') { 
-            agent {
-                docker {
-                    image 'python' 
-                }
-            }
+        stage('Python Script') { 
             steps {
                 sh 'python --version' 
             }

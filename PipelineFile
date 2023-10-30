@@ -1,9 +1,14 @@
 pipeline {
-    agent { docker { image 'python' } }
-    stages{
-        stage('Python Version') {
+    agent none 
+    stages {
+        stage('Build') { 
+            agent {
+                docker {
+                    image 'python:3.12.0-alpine3.18' 
+                }
+            }
             steps {
-                sh 'pwd'
+                sh 'python --version' 
             }
         }
     }

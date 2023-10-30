@@ -1,16 +1,8 @@
 pipeline {
-    agent {
-        docker {
-            image 'python'
-        } 
-    }
     stages{
         stage('Python Version') {
-            environment {
-                home="."
-            }
             steps {
-                sh 'python --version'
+                sh 'pwd'
             }
         }
     }

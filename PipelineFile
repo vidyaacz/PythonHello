@@ -1,0 +1,14 @@
+pipeline {
+    agent {
+        docker {
+            image 'python'
+        } 
+    }
+    stages{
+        stage('Python Version') {
+            steps {
+                sh 'python --version'
+            }
+        }
+    }
+}

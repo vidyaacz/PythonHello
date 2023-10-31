@@ -1,0 +1,14 @@
+pipeline {
+    agent {
+        docker {
+            image 'python' 
+        }
+    }
+    stages {
+        stage('Python Script') { 
+            steps {
+                sh 'python ./hello.py' 
+            }
+        }
+    }
+}

@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Python Script') { 
             steps {
-                sh 'winget install python3'
+                bat 'winget install python3'
                 sh 'python ./hello.py' 
             }
         }

@@ -3,8 +3,7 @@ pipeline {
     stages {
         stage('Python Script') { 
             steps {
-                bat 'apt-get update'
-                bat 'apt-get install python3'
+                sh 'winget install python3'
                 sh 'python ./hello.py' 
             }
         }

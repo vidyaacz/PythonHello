@@ -1,0 +1,12 @@
+pipeline {
+    agent any
+    stages {
+        stage('Python Script') { 
+            steps {
+                sh apt-get update
+                sh apt-get install python3
+                sh 'python ./hello.py' 
+            }
+        }
+    }
+}
